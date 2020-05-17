@@ -12,16 +12,20 @@ resultado=0;
 suma1=0;
 suma2=0;
 
-if largo > 3
-    %suma de los 4 elementos mayores
-    suma1 = sumarCuatroMayores(vector)
-    %suma de los 4 elementos menores
-    suma2 = sumarCuatroMenores(vector)
-    resultado = sqrt(suma1) - sqrt(suma2)
-    texto = sprintf('El resultado de la función es: %d', resultado);
-    disp(texto);
+if isnumeric(vector) == 1
+    if largo > 3
+        %suma de los 4 elementos mayores
+        suma1 = sumarCuatroMayores(vector);
+        %suma de los 4 elementos menores
+        suma2 = sumarCuatroMenores(vector);
+        resultado = sqrt(suma1) - sqrt(suma2);
+        texto = sprintf('El resultado de la función es: %d', resultado);
+        disp(texto);
+    else
+        disp('Ingrese un vector de 4 o más elementos');
+    end
 else
-    disp('Ingrese un vector de 4 o más elementos');
+    disp('Debe ingresar un vector que contenga solo números');
 end
 end
 
