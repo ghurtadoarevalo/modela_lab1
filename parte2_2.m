@@ -1,11 +1,14 @@
-% como entrada un vector y despliegue por pantalla el resultadode la ra ́ız cuadrada 
-%de la suma de los 4 elementos de mayor valor, menos el resultado de lasuma de la ra ́ız 
-%cuadrada de los 4 elementos de menor valor.  Debe manejar el ingreso err ́oneode los 
-%valores del vector y de la cantidad de elementos del vector.
-%
+% Parte 2.2
 
-function [resultado] = funcion(vector)
-%largo vector
+% Recibe como entrada un vector.
+% Esta función tiene como propósito calcular la raíz cuadrada de la suma de
+% los cuatro elementos de mayor valor del vector, menos el resultado de la
+% raíz cuadrada de la suma de los cuatro elementos de menor valor del
+% vector.
+% Entrega el resultado por pantalla.
+
+function [resultado] = parte2_2(vector)
+% Largo vector
 largo = length(vector);
 
 resultado=0;
@@ -14,9 +17,9 @@ suma2=0;
 
 if isnumeric(vector) == 1
     if largo > 3
-        %suma de los 4 elementos mayores
+        % Suma de los 4 elementos mayores
         suma1 = sumarCuatroMayores(vector);
-        %suma de los 4 elementos menores
+        % Suma de los 4 elementos menores
         suma2 = sumarCuatroMenores(vector);
         resultado = sqrt(suma1) - sqrt(suma2);
         texto = sprintf('El resultado de la función es: %d', resultado);
