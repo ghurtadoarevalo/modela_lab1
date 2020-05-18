@@ -11,7 +11,7 @@ while (i<4)
     i=i+1;
     elemento= min(vector);
     suma = suma + elemento;
-    indice = find(vector==elemento);    % Obtengo el indice del elemento más alto y lo elimino.
+    indice = find(vector==elemento);    % Obtengo el indice del elemento más bajo y lo elimino.
     vector(indice) = [];
 end
 end
