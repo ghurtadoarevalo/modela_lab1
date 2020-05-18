@@ -1,25 +1,20 @@
 function graph_log(X1, Y1)
-%CREATEAXES(Parent1, X1, Y1)
-%  PARENT1:  axes parent
-%  X1:  vector of x data
-%  Y1:  vector of y data
 
 figure
 
-% Create semilogy
+% Se crea el gráfico con y en base logarítmica
 semilogy(X1,Y1)
 
-% Create axes
-
-% Create ylabel
+% Se crea el eje y
 ylabel('Eje y logarítmico');
 
-% Create xlabel
+% Se crea el eje x
 xlabel('Eje x [-10:10]');
 
-% Create title
+% Se crea el título del gráfico
 title('Gráfico Función c(x) = 6 * e^{x+18} con logaritmo');
 
+% Activación de la grilla
 grid on;
 
 
